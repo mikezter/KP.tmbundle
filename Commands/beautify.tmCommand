@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env ruby
+
+def format_method text, line
+  line.match /^(\s*)/
+  spaces = $1
+  text.match /^(\s*)([\w\d\s\_]+)\s*\((.*)\)/
+  formatted = "#{$2}(\n#{spaces}\t"
+  formatted += $3.
+    gsub(" ", "").
+    gsub(",", ",\n#{spaces}\t").
+    gsub('=&gt;', ' =&gt; ').
+    gsub('{', '{ ').
+    gsub('}', ' }').
+    gsub('[', '[ ').gsub(']', ' ]')
+  formatted += "\n#{spaces})"
+  formatted
+end
+
+def main selected_text, line
+  if selected_text.match /^[\w\d\_]+\((.*)\)$/
+    puts format_method(selected_text, line)
+  else
+    puts selected_text
+  end
+end
+
+# main 'do( a, b, c )', '  do( a, b, c )'
+main ENV['TM_SELECTED_TEXT'], ENV['TM_CURRENT_LINE']</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>keyEquivalent</key>
+	<string>~@=</string>
+	<key>name</key>
+	<string>beautify</string>
+	<key>output</key>
+	<string>replaceSelectedText</string>
+	<key>scope</key>
+	<string>source.ruby</string>
+	<key>uuid</key>
+	<string>69B0DDA0-E260-4D86-A7EC-0151CDAC1AEE</string>
+</dict>
+</plist>
