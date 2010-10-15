@@ -13,4 +13,4 @@ h2. Installation
 
 h2. Contributions
 
-Sponsored by www.kaeuferportal.de.
+Sponsored by "Kaeuferportal":http://www.kaeuferportal.de .
