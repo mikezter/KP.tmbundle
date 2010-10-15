@@ -6,10 +6,14 @@
 	<string>KP</string>
 	<key>ordering</key>
 	<array>
+		<string>0CE27089-8D9A-48A3-8C07-EFF7FC0E2B81</string>
 		<string>69B0DDA0-E260-4D86-A7EC-0151CDAC1AEE</string>
 		<string>CA32C148-B650-4803-8E39-3686F572D925</string>
 		<string>B6D6DA18-5168-4327-B2CD-00FE6D56D89E</string>
 		<string>EB3ABF71-35F1-494B-B337-5F690B04BC7E</string>
+		<string>03EE9D4E-8038-4D85-844D-62F6769EAC28</string>
+		<string>061AE748-9C19-4562-B0FF-91277C271828</string>
+		<string>CD2AE4E5-636E-4F9F-AD11-BB434AE81996</string>
 	</array>
 	<key>uuid</key>
 	<string>CD0A9C13-2C4B-4456-9E05-0E8F97533656</string>
