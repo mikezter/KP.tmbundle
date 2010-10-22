@@ -42,6 +42,45 @@
 		<dict>
 			<key>argument</key>
 			<dict>
+				<key>commands</key>
+				<array>
+					<dict>
+						<key>argument</key>
+						<dict>
+							<key>beforeRunningCommand</key>
+							<string>nop</string>
+							<key>command</key>
+							<string>#!/usr/bin/env ruby
+require ENV['TM_SUPPORT_PATH'] + '/lib/textmate'
+puts `"${TM_RUBY:=ruby}" -e'puts "Using ruby-" + RUBY_VERSION.to_s'`
+result = `"${TM_RUBY:=ruby}" -wc 2&gt;&amp;1`
+puts result
+TextMate.go_to :line =&gt; $1 if result =~ /-:(\d+):/
+</string>
+							<key>input</key>
+							<string>document</string>
+							<key>keyEquivalent</key>
+							<string>^V</string>
+							<key>name</key>
+							<string>Validate Syntax</string>
+							<key>output</key>
+							<string>showAsTooltip</string>
+							<key>scope</key>
+							<string>source.ruby</string>
+							<key>uuid</key>
+							<string>EE5F19BA-6C02-11D9-92BA-0011242E4184</string>
+						</dict>
+						<key>command</key>
+						<string>executeCommandWithOptions:</string>
+					</dict>
+				</array>
+			</dict>
+			<key>command</key>
+			<string>playMacroWithOptions:</string>
+		</dict>
+		<dict>
+			<key>argument</key>
+			<dict>
 				<key>beforeRunningCommand</key>
 				<string>saveActiveFile</string>
 				<key>input</key>
@@ -57,9 +96,11 @@
 			<string>executeCommandWithOptions:</string>
 		</dict>
 	</array>
+	<key>keyEquivalent</key>
+	<string>@s</string>
 	<key>name</key>
-	<string>fix whitespace and save</string>
+	<string>fix ws, validate, save</string>
 	<key>uuid</key>
-	<string>B6D6DA18-5168-4327-B2CD-00FE6D56D89E</string>
+	<string>389B9525-CA7B-4473-B842-8AD160EDCEDF</string>
 </dict>
 </plist>
