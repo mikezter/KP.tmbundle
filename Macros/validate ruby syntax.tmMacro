@@ -36,6 +36,8 @@ TextMate.go_to :line =&gt; $1 if result =~ /-:(\d+):/
 	</array>
 	<key>name</key>
 	<string>validate ruby syntax</string>
+	<key>scope</key>
+	<string>source.ruby</string>
 	<key>uuid</key>
 	<string>C427DDE9-36B1-47EE-8E8D-F53092CCDB25</string>
 </dict>

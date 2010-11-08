@@ -101,7 +101,7 @@ TextMate.go_to :line =&gt; $1 if result =~ /-:(\d+):/
 	<key>name</key>
 	<string>fix ws, validate, save</string>
 	<key>scope</key>
-	<string>source.ruby</string>
+	<string>source.ruby -text.html</string>
 	<key>uuid</key>
 	<string>389B9525-CA7B-4473-B842-8AD160EDCEDF</string>
 </dict>
