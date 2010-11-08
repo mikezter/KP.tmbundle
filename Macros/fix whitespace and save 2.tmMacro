@@ -57,8 +57,12 @@
 			<string>executeCommandWithOptions:</string>
 		</dict>
 	</array>
+	<key>keyEquivalent</key>
+	<string>@s</string>
 	<key>name</key>
 	<string>fix whitespace and save</string>
+	<key>scope</key>
+	<string>source</string>
 	<key>uuid</key>
 	<string>B6D6DA18-5168-4327-B2CD-00FE6D56D89E</string>
 </dict>
