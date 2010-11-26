@@ -62,7 +62,7 @@
 	<key>name</key>
 	<string>fix whitespace and save</string>
 	<key>scope</key>
-	<string>text</string>
+	<string>text -text.html.ruby</string>
 	<key>uuid</key>
 	<string>B6D6DA18-5168-4327-B2CD-00FE6D56D89E</string>
 </dict>
