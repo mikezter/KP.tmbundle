@@ -95,12 +95,8 @@ TextMate.go_to :line =&gt; $1 if result =~ /-:(\d+):/</string>
 			<string>playMacroWithOptions:</string>
 		</dict>
 	</array>
-	<key>keyEquivalent</key>
-	<string>@s</string>
 	<key>name</key>
 	<string>fix ws, validate erb, save</string>
-	<key>scope</key>
-	<string>text.html.ruby</string>
 	<key>uuid</key>
 	<string>67F9B311-7E5E-448C-A1C0-DFFA4778B3CC</string>
 </dict>
