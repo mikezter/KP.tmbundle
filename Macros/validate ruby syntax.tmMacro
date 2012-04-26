@@ -12,8 +12,8 @@
 				<key>command</key>
 				<string>#!/usr/bin/env ruby
 require ENV['TM_SUPPORT_PATH'] + '/lib/textmate'
-puts `"${TM_RUBY:=ruby}" -e'puts "Using ruby-" + RUBY_VERSION.to_s'`
-result = `"${TM_RUBY:=ruby}" -wc 2&gt;&amp;1`
+puts `"${TM_RUBY:=/Users/mikezter/.rvm/bin/rvm-auto-ruby}" -e'puts "Using ruby-" + RUBY_VERSION.to_s'`
+result = `"${TM_RUBY:=/Users/mikezter/.rvm/bin/rvm-auto-ruby}" -wc 2&gt;&amp;1`
 puts result
 TextMate.go_to :line =&gt; $1 if result =~ /-:(\d+):/
 </string>
@@ -34,6 +34,8 @@ TextMate.go_to :line =&gt; $1 if result =~ /-:(\d+):/
 			<string>executeCommandWithOptions:</string>
 		</dict>
 	</array>
+	<key>keyEquivalent</key>
+	<string>^~@\</string>
 	<key>name</key>
 	<string>validate ruby syntax</string>
 	<key>scope</key>
